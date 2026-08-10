@@ -1,0 +1,100 @@
+/* poster — 海报模板：白框 + 深色渐变面板，大标题，适合活动海报/宣传 */
+body {
+  font-family: "WenQuanYi Zen Hei", "Noto Sans CJK SC", sans-serif;
+  background: #ffffff;
+  color: #f8fafc;
+  padding: 24px;
+}
+.md2img-content {
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 55%, #312e81 100%);
+  border-radius: 24px;
+  padding: 64px 56px;
+  color: #f8fafc;
+}
+h1 {
+  font-size: 40px;
+  line-height: 1.25;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin: 0 0 24px;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  margin-top: 20px;
+}
+h2 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #fbbf24;
+  margin: 40px 0 12px;
+}
+h3 {
+  font-size: 18px;
+  color: #e2e8f0;
+  margin: 24px 0 10px;
+}
+p {
+  margin: 10px 0;
+}
+blockquote {
+  margin: 14px 0;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+  color: #f1f5f9;
+}
+th {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 10px 12px;
+  text-align: left;
+}
+tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.05);
+}
+ul, ol {
+  margin: 10px 0;
+  padding-left: 26px;
+}
+li {
+  margin: 5px 0;
+}
+code {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fde68a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+pre {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+pre code {
+  background: none;
+  color: #e2e8f0;
+  padding: 0;
+}
+strong {
+  color: #fde68a;
+}
+a {
+  color: #fbbf24;
+  text-decoration: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 28px 0;
+}
