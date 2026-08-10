@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "md2img"
+version = "0.0.1"
+description = "Markdown 转多模板多尺寸 PNG 图片（开源小工具）"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "md2img contributors" }]
+keywords = ["markdown", "png", "image", "weasyprint", "template"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "markdown>=3.5",
+    "weasyprint>=60",
+    "pypdfium2>=4",
+    "Pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+md2img = "md2img.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["md2img"]
+
+[tool.setuptools.package-data]
+md2img = ["templates/*.css"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
